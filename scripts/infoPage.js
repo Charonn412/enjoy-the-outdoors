@@ -20,10 +20,10 @@ function getValue() {
 
 let infoSearchResults = [];
 
- function arrayInfoElements(mountains) {
-   return `<li>${mountains.name}</li> <li>${mountains.elevation}</li> <li>${mountains.effort}</li> <li>${mountains.img}</li> <li>${mountains.desc}</li> <li>${mountains.coords.lat.lng}</li>  `;
- }
-  
+function arrayInfoElements(mountains) {
+  return `<li>${mountains.name}</li> <li> The elevation is ${mountains.elevation}</li> <li> The effort is ${mountains.effort}</li>  <li>${mountains.desc}</li> <li>${mountains.coords.lat.lng}</li> <img src=assets/images/${mountains.img} /> `;
+}
+
 document.onchange = function clickAndLoadInfo() {
   infoSearchResults = [];
   for (let i = 0; i < mountainsLength; i++) {
@@ -31,9 +31,20 @@ document.onchange = function clickAndLoadInfo() {
     if (mountainsArray[i].name == infoValue) {
       infoSearchResults.push(mountainsArray[i]);
       console.log(infoValue);
-             console.log(infoValue.length);
-             document.getElementById("showArray").innerHTML =
-               infoSearchResults.map(arrayInfoElements);
+      console.log(infoValue.length);
+      document.getElementById("showArray").innerHTML =
+        infoSearchResults.map(arrayInfoElements);
     }
   }
 };
+
+
+
+
+// function displayImg() {
+//     for (var i = 0; i < boldStuffs.length; i += 1) {
+//         infoSearchResults[i].innerHTML = mountains.name + '<img src="'+ mountain.image+'">';
+//     }
+// }
+
+
