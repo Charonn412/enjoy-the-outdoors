@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,20 @@
     <title>National Park Search Page</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="searchPage.html">Search By Location</a></li>
-            <li><a href="infoPage.html">More Mountain Info</a></li>
-        </ul>
-    </nav>
+
+
+    <div class="top-page">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="searchPage.html">Search By Location</a></li>
+                <li><a href="infoPage.html">More Mountain Info</a></li>
+            </ul>
+        </nav>
+        <img src="assets/images/pexels-pixabay-210243.jpg" alt="">
+    </div>
     <select name="location" id="location" onchange="collectValue();"></select>
 
     <select name="parkType" id="parkType" onchange="seeValue();"></select>
@@ -22,11 +29,16 @@
     <p id="printArray"></p>
     <p id="printParkTypeArray"></p>
     <div id="searchList"></div>
-    <!-- <---------------------Scripts---------------------------------> 
+
+    <div class="usmap">
+        <img src="assets/images/usa-states-us-map.jpg" alt="USA Map">
+    </div>
+    <!-- <---------------------Scripts--------------------------------->
     <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/locationData.js"></script>
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
     <script src="scripts/search.js"></script>
 </body>
+
 </html>

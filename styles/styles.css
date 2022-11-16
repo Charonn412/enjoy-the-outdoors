@@ -54,3 +54,8 @@ a {
 .overlay {
     background: tan;
 }
+
+.top-page img {
+    max-width: 100%;
+    height: 1%;
+}
