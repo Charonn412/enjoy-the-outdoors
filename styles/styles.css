@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 nav>ul>li{
     border: solid  black;
     display: inline-block;
@@ -5,6 +10,47 @@ nav>ul>li{
 }
 
 a {
-    text-decoration: none;
+    
     color: black;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+}
+
+.menu ul li a:hover {
+    color: green;
+}
+
+
+.imgBox {
+    display: grid;
+    height: 100%;
+}
+.img-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    /* margin: auto; */
+}
+
+.overlay {
+    background: tan;
 }

@@ -21,7 +21,7 @@ function getValue() {
 let infoSearchResults = [];
 
 function arrayInfoElements(mountains) {
-  return `<li>${mountains.name}</li> <li> The elevation is ${mountains.elevation}</li> <li> The effort is ${mountains.effort}</li>  <li>${mountains.desc}</li> <li>${mountains.coords.lat.lng}</li> <img src=assets/images/${mountains.img} /> `;
+  return `<li>${mountains.name}</li> <li> The elevation is ${mountains.elevation}</li> <li> The effort is ${mountains.effort}</li>  <li>${mountains.desc}</li> <li>${mountains.coords.lat}</li> <li>${mountains.coords.lng}</li> <img src=assets/images/${mountains.img} /> `;
 }
 
 document.onchange = function clickAndLoadInfo() {
