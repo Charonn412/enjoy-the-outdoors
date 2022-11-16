@@ -12,7 +12,7 @@
 <body>
 
 
-    <div class="top-page">
+    <div class="flex-container">
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -20,11 +20,19 @@
                 <li><a href="infoPage.html">More Mountain Info</a></li>
             </ul>
         </nav>
-        <img src="assets/images/pexels-pixabay-210243.jpg" alt="">
     </div>
-    <select name="location" id="location" onchange="collectValue();"></select>
+    <div class="container">
+        
+        <img src="assets/images/pexels-pixabay-210243.jpg" alt="" height="20px" width="100px">
+        <div class="search">
+            <h2>Plan your Visit</h2>
+            <h1>Find Park by State</h1>
+            <select name="parkType" id="parkType" onchange="seeValue();"></select>
+            <select name="location" id="location" onchange="collectValue();"></select>
+            
+        </div>
+    </div>
 
-    <select name="parkType" id="parkType" onchange="seeValue();"></select>
 
     <p id="printArray"></p>
     <p id="printParkTypeArray"></p>
