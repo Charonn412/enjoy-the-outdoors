@@ -19,7 +19,7 @@ const searchList = document.getElementById("searchList");
 let searchResults = [];
 
 function arrayElements(parks) {
-  return ` <li> ${parks.LocationName} || ${parks.Address} || ${parks.City} || ${parks.State} || ${parks.ZipCode} || ${parks.Phone} || ${parks.Latitude} || ${parks.Longitude} <li>  +`;
+  return ` <p> Park Name: ${parks.LocationName} || Address: ${parks.Address} || City: ${parks.City} || State: ${parks.State} || Zipcode: ${parks.ZipCode} || Phone: ${parks.Phone} || Latitude: ${parks.Latitude} || Longitude: ${parks.Longitude} <p> `;
 }
 
 document.onchange = function clickAndLoad() {
@@ -31,7 +31,7 @@ document.onchange = function clickAndLoad() {
       console.log(searchResults);
       console.log(searchResults.length);
       document.getElementById("printArray").innerHTML =
-        searchResults.map(arrayElements);
+        searchResults.map(arrayElements).join( );
     }
   }
 };
@@ -55,7 +55,8 @@ function seeValue() {
 let searchResultsParkType = [];
 
 function arrayElementsParksType(parksType) {
-  return ` <li> ${parksType.LocationName} <li>  +`;
+  return ` <li> ${parksType.LocationName} <li> 
+  `;
 }
 
 // contains()
