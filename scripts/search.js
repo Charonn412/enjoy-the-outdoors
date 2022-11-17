@@ -36,17 +36,7 @@ document.onchange = function clickAndLoad() {
   }
 };
 
-//searchResults = [];
 
-//trying to find utah so i can see whether or not i can find a property in an object with a find(); doesnt work
-// let results = nationalParksArray.State.find(function(element) {
-//     if (element == "Utah") {
-//         console.log ("yuh");
-//     }
-// });
-// let side = locationsArray.length
-
-// console.log(results)
 // -------------------------------------------Search by Park Type-------------------------------------------------------------------------
 let parkTypeLength = parkTypesArray.length;
 
@@ -71,24 +61,45 @@ function arrayElementsParksType(parksType) {
 // contains()
 // filter method
 
-document.onchange = function clickAndLoadParkType() {
-  searchResultsParkType = [];
-  for (let i = 0; i < nationalParksLength; i++) {
-    let inputValueParksType = document.getElementById("parkType").value;
-    console.log(inputValueParksType);
-    let filterByType = nationalParksArray.filter((parkType) => {
-      parkType.LocationName.includes(inputValueParksType);
-    });
 
-    if (filterByType) {
+//working but not together
+// document.onchange = function clickAndLoadParkType() {
+//   let inputValueParksType = document.getElementById("parkType").value;
+//   let filterByTypeArray = nationalParksArray.filter((parkType) => {
+//     return parkType.LocationName.includes(inputValueParksType);
+//   });
+//   document.getElementById("printParkTypeArray").innerHTML =
+//     filterByTypeArray.map(arrayElementsParksType);
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for (let i = 0; i < nationalParksLength; i++) {
+    console.log(inputValueParksType);
+
+    if (filterByType.length > 0) {
       searchResultsParkType.push(nationalParksArray[i]);
       console.log(searchResultsParkType);
       console.log(searchResultsParkType.length);
       document.getElementById("printParkTypeArray").innerHTML =
         searchResultsParkType.map(arrayElementsParksType);
     }
-  }
-};
+  } */
 
 // nationalParksArray.forEach((parkType) => {
 //   if (parkType.LocationName.includes(inputValueParksType)))

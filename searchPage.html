@@ -23,18 +23,18 @@
     </div>
     <div class="container">
         
-        <img src="assets/images/pexels-pixabay-210243.jpg" alt="" height="20px" width="100px">
+        <img src="assets/images/pexels-pixabay-210243.jpg" alt="" >
         <div class="search">
             <h2>Plan your Visit</h2>
             <h1>Find Park by State</h1>
-            <h2><select name="location" id="location" onchange="collectValue();"></select></h2>
-            <br>
+            
+            
             <select name="parkType" id="parkType" onchange="seeValue();"></select>
             
             
         </div>
     </div>
-
+    <select name="location" id="location" onchange="collectValue();"></select>
 
     <p id="printArray"></p>
     <p id="printParkTypeArray"></p>
@@ -49,6 +49,7 @@
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
     <script src="scripts/search.js"></script>
+    <script src="scripts/searchByParkType.js"></script>
 </body>
 
 </html>
