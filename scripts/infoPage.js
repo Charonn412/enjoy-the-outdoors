@@ -15,13 +15,13 @@ for (let i = 0; i < mountainsLength; i++) {
 
 function getValue() {
   let inputValue = document.getElementById("mountainNames").value;
-  alert(inputValue); // lets me know that i have a hold of each input value
+  // alert(inputValue); // lets me know that i have a hold of each input value
 }
 
 let infoSearchResults = [];
 
 function arrayInfoElements(mountains) {
-  return `<li>${mountains.name}</li> <li> The elevation is ${mountains.elevation}</li> <li> The effort is ${mountains.effort}</li>  <li>${mountains.desc}</li> <li>${mountains.coords.lat}</li> <li>${mountains.coords.lng}</li> <img src=assets/images/${mountains.img} /> `;
+  return `<p>${mountains.name} has an elevation of ${mountains.elevation} and a ${mountains.effort} effort. <br><br> <p>${mountains.desc}</p> <br> The lattiude is ${mountains.coords.lat} and the longitude is ${mountains.coords.lng}</p> <br>  <p><img src=assets/images/${mountains.img} /> </p> `;
 }
 
 document.onchange = function clickAndLoadInfo() {

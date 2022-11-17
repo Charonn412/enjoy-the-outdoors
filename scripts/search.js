@@ -12,7 +12,7 @@ for (let i = 0; i < locationLength; i++) {
 
 function collectValue() {
   let inputValue = document.getElementById("location").value;
-  alert(inputValue);
+  
 }
 
 const searchList = document.getElementById("searchList");
@@ -61,7 +61,7 @@ for (let i = 0; i < parkTypeLength; i++) {
 
 function seeValue() {
   let inputValue = document.getElementById("parkType").value;
-  alert(inputValue);
+  
 }
 
 let searchResultsParkType = [];
@@ -70,6 +70,26 @@ function arrayElementsParksType(parksType) {
   return ` <li> ${parksType.LocationName} <li>  +`;
 }
 
+// contains()
+// filter method
+
+document.onchange = function clickAndLoadParkType() {
+  searchResultsParkType = [];
+  for (let i = 0; i < nationalParksLength; i++) {
+    let inputValueParksType = document.getElementById("parkType").value;
+    let filterByType = nationalParksArray.filter((parkType) =>
+      parkType.LocationName.includes(inputValueParksType)
+    );
+    if (filterByType) {
+      searchResultsParkType.push(nationalParksArray[i]);
+      console.log(searchResultsParkType);
+      console.log(searchResultsParkType.length);
+      document.getElementById("printParkTypeArray").innerHTML =
+        searchResultsParkType.map(arrayElementsParksType);
+    }
+  }
+};
+
 // document.onchange = function clickAndLoadParkType() {
 //   searchResultsParkType = [];
 //   let similarSearch = nationalParksArray.filter((arrayValue) =>
@@ -77,7 +97,7 @@ function arrayElementsParksType(parksType) {
 //   for (let i = 0; i < nationalParksLength; i++) {
 //     let inputValueParksType = document.getElementById("parkType").value;
 
-//     if (similarSearch) {
+//     if (inputValueParksType) {
 //       searchResultsParkType.push(nationalParksArray[i]);
 //       console.log(searchResultsParkType);
 //       console.log(searchResultsParkType.length);
