@@ -1,11 +1,11 @@
 // <------------------------------------------------------Info Page--------------------------------------------------------------->
 let mountainsLength = mountainsArray.length;
-// for (let i = 0; i < length; i++) {
-//   let mountainNames = (mountainsArray[i].name);
-//   console.log(mountainNames);
-// }
 
 const mountainDropDown = document.getElementById("mountainNames");
+//empty array for filtered results to be push into
+let infoSearchResults = [];
+
+//adds mountain options to select > options tag
 for (let i = 0; i < mountainsLength; i++) {
   let mountains = document.createElement("option");
   mountains.textContent = mountainsArray[i].name;
@@ -13,17 +13,17 @@ for (let i = 0; i < mountainsLength; i++) {
   mountainDropDown.appendChild(mountains);
 }
 
+//function to get value but is eventually redeclared
 function getValue() {
   let inputValue = document.getElementById("mountainNames").value;
-  // alert(inputValue); // lets me know that i have a hold of each input value
 }
 
-let infoSearchResults = [];
-
+//how my infomation is displayed
 function arrayInfoElements(mountains) {
   return `<p>${mountains.name} has an elevation of ${mountains.elevation} and a ${mountains.effort} effort. <br><br> <p>${mountains.desc}</p> <br> The lattiude is ${mountains.coords.lat} and the longitude is ${mountains.coords.lng}</p> <br>  <p><img src=assets/images/${mountains.img} /> </p> `;
 }
 
+//filtering and pushing results in empty array and onto page
 document.onchange = function clickAndLoadInfo() {
   infoSearchResults = [];
   for (let i = 0; i < mountainsLength; i++) {
@@ -38,13 +38,5 @@ document.onchange = function clickAndLoadInfo() {
   }
 };
 
-
-
-
-// function displayImg() {
-//     for (var i = 0; i < boldStuffs.length; i += 1) {
-//         infoSearchResults[i].innerHTML = mountains.name + '<img src="'+ mountain.image+'">';
-//     }
-// }
 
 

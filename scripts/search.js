@@ -1,8 +1,11 @@
 // ----------------------------------------Search by Location------------------------------------------------------------------------------------
 let locationLength = locationsArray.length;
 let nationalParksLength = nationalParksArray.length;
-
+let searchResults = [];
+const searchList = document.getElementById("searchList");
 const locationDropDown = document.getElementById("location");
+
+//adds state options to select > options tag
 for (let i = 0; i < locationLength; i++) {
   let locations = document.createElement("option");
   locations.textContent = nationalParksArray[i].State;
@@ -10,18 +13,18 @@ for (let i = 0; i < locationLength; i++) {
   locationDropDown.appendChild(locations);
 }
 
+//function to collect value but is eventually redeclared
 function collectValue() {
   let inputValue = document.getElementById("location").value;
 }
 
-const searchList = document.getElementById("searchList");
 
-let searchResults = [];
-
+//how my infomation is displayed
 function arrayElements(parks) {
   return ` <p> Park Name: ${parks.LocationName} || Address: ${parks.Address} || City: ${parks.City} || State: ${parks.State} || Zipcode: ${parks.ZipCode} || Phone: ${parks.Phone} || Latitude: ${parks.Latitude} || Longitude: ${parks.Longitude} <p> `;
 }
 
+//filtering and pushing results in empty array and onto page
 document.getElementById("location").onchange = function clickAndLoad() {
   searchResults = [];
   for (let i = 0; i < nationalParksLength; i++) {
@@ -29,7 +32,7 @@ document.getElementById("location").onchange = function clickAndLoad() {
     if (nationalParksArray[i].State == inputValue) {
       searchResults.push(nationalParksArray[i]);
       document.getElementById("printArray").innerHTML =
-        searchResults.map(arrayElements).join( );
+        searchResults.map(arrayElements).join(" ");
     }
   }
 };
@@ -37,8 +40,10 @@ document.getElementById("location").onchange = function clickAndLoad() {
 
 // -------------------------------------------Search by Park Type-------------------------------------------------------------------------
 let parkTypeLength = parkTypesArray.length;
-
+let searchResultsParkType = [];
 const parkTypeDropDown = document.getElementById("parkType");
+
+//adds park type options to select > options tag
 for (let i = 0; i < parkTypeLength; i++) {
   let parkTypes = document.createElement("option");
   parkTypes.textContent = parkTypesArray[i];
@@ -46,12 +51,13 @@ for (let i = 0; i < parkTypeLength; i++) {
   parkTypeDropDown.appendChild(parkTypes);
 }
 
+//function to collect value but is eventually redeclared
 function seeValue() {
   let inputValue = document.getElementById("parkType").value;
 }
 
-let searchResultsParkType = [];
 
+//how my infomation is displayed
 function arrayElementsParksType(parksType) {
   return ` <li> ${parksType.LocationName} <li> 
   `;
@@ -61,14 +67,14 @@ function arrayElementsParksType(parksType) {
 // filter method
 
 
-
+//filtering and pushing results in empty array and onto page
 document.getElementById("parkType").onchange = function clickAndLoadParkType() {
   let inputValueParksType = document.getElementById("parkType").value;
   let filterByTypeArray = nationalParksArray.filter((parkType) => {
     return parkType.LocationName.includes(inputValueParksType);
   });
   document.getElementById("printParkTypeArray").innerHTML =
-    filterByTypeArray.map(arrayElementsParksType);
+    filterByTypeArray.map(arrayElementsParksType).join(" ");;
 };
 
 
