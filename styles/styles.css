@@ -3,41 +3,37 @@
   padding: 0;
 }
 
-body{
-    background-color: tan;
+body {
+  background-color: tan;
 }
 
-nav  {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding-top: 40px;
-padding-left: 10%;
-padding-right: 10%;
-padding-bottom: 30px;
-background-color: black;
-
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 40px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 30px;
+  background-color: black;
 }
 
 nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0px 30px;
+  list-style-type: none;
+  display: inline-block;
+  padding: 0px 30px;
 }
 
 nav ul li a {
-    color: tan;
-    text-decoration: none;
-    font-weight: bolder;
-    
+  color: tan;
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 nav ul li img {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
-
-
 
 .menu {
   position: absolute;
@@ -101,31 +97,34 @@ select {
 }
 
 .usmap img {
-    padding-left: 400px;
-  height: 50vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 50vw;
 }
 
 p > img {
-    width: 100vw;
-    height: 80vh;
+  width: 100vw;
+  height: 80vh;
 }
 
 p#showArray {
-    
-    font-size: larger;
-   font-weight: bold; 
-}
-
-h1, h2 {
-  
-  color: black;
-  
-}
-
-p{
-  padding-top: 20px;
+  font-size: larger;
   font-weight: bold;
 }
 
+h1,
+h2 {
+  text-align: center;
+  color: black;
+}
 
+p {
+  padding-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#loveParks{
+  min-height: 100%;
+}
