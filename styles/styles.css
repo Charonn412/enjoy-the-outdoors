@@ -128,3 +128,10 @@ p {
 #loveParks{
   min-height: 100%;
 }
+.email {
+  position: relative;
+  /* z-index: 10; */
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
