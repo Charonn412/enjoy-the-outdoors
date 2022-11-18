@@ -1,4 +1,9 @@
+//-----------------------------------------------------Import---------------------------------------------------------------------------------------------------
+import { parkTypesArray } from "./parkTypeData.js";
+import { locationsArray } from "./locationData";
+import { nationalParksArray } from "./nationalParkData";
 // ----------------------------------------Search by Location------------------------------------------------------------------------------------
+
 let locationLength = locationsArray.length;
 let nationalParksLength = nationalParksArray.length;
 let searchResults = [];
